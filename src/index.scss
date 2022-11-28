@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&family=Rubik:wght@300;400;500&display=swap');
+/**
+*! LAYOUT
+*/
+$mobile: 375px;
+$desktop: 1440px;
+/**
+*! COLORS
+*/
+/**
+*? PRIMARY
+*/
+$grayish_blue: hsl(237 18% 59%);
+$soft_red: hsl(345 95% 68%);
+/**
+*? NEUTRAL
+*/
+$white: hsl(0 0% 100%);
+$dark_desaturated_blue: hsl(236, 21%, 26%);
+$very_dark_blue: hsl(235 16% 14%);
+$mostly_dark_blue: hsl(235, 18%, 12%);
+/**
+*! TYPOGRAPHY
+*/
+/**
+*? BODY COPY
+*/
+$font_size: 14px;
+$font_family: 'Red Hat Text', 'Rubik', sans-serif;
+$font_wight: 700;
+/**
+*! ICONS
+*/
+$facebook: url(../images/icon-facebook.svg);
+$instagram: url(../images/icon-instagram.svg);
+$pinterest: url(../images/icon-pinterest.svg);
+$stars: url(../images/bg-stars.svg);
+$hills: url(../images/pattern-hills.svg);
+
+/**
+*! STYLES
+*/
+*, ::before, ::after{
+    box-sizing: border-box;
+}
+body{
+    background-color: $very_dark_blue;
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    font-family: $font_family;
+    font-size: $font_size;
+    font-weight: $font_wight;
+    color: $white;
+}
+#root{
+    position: relative;
+    width: $desktop;
+}

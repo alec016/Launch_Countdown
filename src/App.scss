@@ -1,0 +1,483 @@
+@import 'index.scss';
+
+.stars{
+    background-image: $stars;
+    height: 569px;
+}
+.hills{
+    background-image: $hills;
+    height: 197px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    &>.footer{
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 40px;
+        & svg{
+            width: 32px;
+            height: 32px;
+            margin: {
+                top: 40px;
+            }
+            color: $grayish_blue;
+            &:hover{
+                color: $soft_red;
+                cursor: pointer;
+            }
+        }
+    }
+    
+}
+
+.countdown-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .header{
+        font-size: 20px;
+        letter-spacing: 10px;
+    }
+    .countdown-container__inner{
+        margin-top: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 50px;
+        .card{
+            overflow: hidden;
+            &_text{
+                letter-spacing: 4px;
+                color: $grayish_blue;
+                width: 100px;
+                display: grid;
+                place-content: center;
+                margin-top: 15px;
+            }
+            &_day{
+                height: 100px;
+                width: 100px;
+                position: relative;
+                &_sup{
+                    overflow: hidden;
+                    height: 100%;
+                    width: 100%;
+                    position: absolute;
+                    border-radius: 15px;
+                    --deg: 0;
+                    transition: transform .5s linear;
+                    transform: rotateX(calc(var(--deg)*1deg));
+                    filter: brightness(80%);
+                    span{
+						transition: transform .5s linear;
+                        background-color: $dark_desaturated_blue;
+                        padding: {
+                            left: 20px;
+                            right: 20px;
+                            top: 50px;
+                            bottom: 50px;
+                        }
+                        display: grid;
+                        place-content: center;
+                        height: 100%;
+                        width: 100%;
+                        font-size: 50px;
+                        color: $soft_red;
+                        position: absolute;
+                        top: 0%;
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            top: 50%;
+                            left: 0%;
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 50%;
+                            background-color: $very_dark_blue;
+                            translate: -50% -50%;
+                        }
+                        &::after{
+                            content: '';
+                            position: absolute;
+                            top: 45%;
+                            right: -5px;
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 50%;
+                            background-color: $very_dark_blue;
+                        }
+                    }
+                }
+                &_inf{
+                    overflow: hidden;
+                    height: 50%;
+                    width: 100%;
+                    position: relative;
+                    top: 50%;
+                    border-bottom-right-radius: 15px;
+                    border-bottom-left-radius: 15px;
+					span{
+						transition: transform .5s linear;
+                        background-color: $dark_desaturated_blue;
+                        padding: {
+                            left: 20px;
+                            right: 20px;
+                            top: 50px;
+                            bottom: 50px;
+                        }
+                        display: grid;
+                        place-content: center;
+                        height: 100%;
+                        width: 100%;
+                        font-size: 50px;
+                        color: $soft_red;
+                        position: absolute;
+                        bottom: 0%;
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            top: 50%;
+                            left: 0%;
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 50%;
+                            background-color: $very_dark_blue;
+                            translate: -50% -50%;
+                        }
+                        &::after{
+                            content: '';
+                            position: absolute;
+                            top: 45%;
+                            right: -5px;
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 50%;
+                            background-color: $very_dark_blue;
+                        }
+                    }
+                    box-shadow: 0px 10px 0px 0px $mostly_dark_blue;
+                }
+            }
+            &_hour{
+                height: 100px;
+                width: 100px;
+                position: relative;
+                &_sup{
+                    --deg: 0;
+                    transition: transform .5s linear;
+                    transform: rotateX(calc(var(--deg)*1deg));
+                    overflow: hidden;
+                    height: 100%;
+                    width: 100%;
+                    position: absolute;
+                    border-radius: 15px;
+                    filter: brightness(80%);
+					span{
+						transition: transform .5s linear;
+                        background-color: $dark_desaturated_blue;
+                        padding: {
+                            left: 20px;
+                            right: 20px;
+                            top: 50px;
+                            bottom: 50px;
+                        }
+                        display: grid;
+                        place-content: center;
+                        height: 100%;
+                        width: 100%;
+                        font-size: 50px;
+                        color: $soft_red;
+                        position: absolute;
+                        top: 0%;
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            top: 50%;
+                            left: 0%;
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 50%;
+                            background-color: $very_dark_blue;
+                            translate: -50% -50%;
+                        }
+                        &::after{
+                            content: '';
+                            position: absolute;
+                            top: 45%;
+                            right: -5px;
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 50%;
+                            background-color: $very_dark_blue;
+                        }
+                    }
+                }
+                &_inf{
+                    overflow: hidden;
+                    height: 50%;
+                    width: 100%;
+                    position: relative;
+                    top: 50%;
+                    border-bottom-right-radius: 15px;
+                    border-bottom-left-radius: 15px;
+					span{
+						transition: transform .5s linear;
+                        background-color: $dark_desaturated_blue;
+                        padding: {
+                            left: 20px;
+                            right: 20px;
+                            top: 50px;
+                            bottom: 50px;
+                        }
+                        display: grid;
+                        place-content: center;
+                        height: 100%;
+                        width: 100%;
+                        font-size: 50px;
+                        color: $soft_red;
+                        position: absolute;
+                        bottom: 0%;
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            top: 50%;
+                            left: 0%;
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 50%;
+                            background-color: $very_dark_blue;
+                            translate: -50% -50%;
+                        }
+                        &::after{
+                            content: '';
+                            position: absolute;
+                            top: 45%;
+                            right: -5px;
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 50%;
+                            background-color: $very_dark_blue;
+                        }
+                    }
+                    box-shadow: 0px 10px 0px 0px $mostly_dark_blue;
+                }
+            }
+            &_minute{
+                height: 100px;
+                width: 100px;
+                position: relative;
+                &_sup{
+                    overflow: hidden;
+                    height: 100%;
+                    width: 100%;
+                    position: absolute;
+                    border-radius: 15px;
+                    --deg: 0;
+                    transition: transform .5s linear;
+                    transform: rotateX(calc(var(--deg)*1deg));
+                    filter: brightness(80%);
+					span{
+						transition: transform .5s linear;
+                        background-color: $dark_desaturated_blue;
+                        padding: {
+                            left: 20px;
+                            right: 20px;
+                            top: 50px;
+                            bottom: 50px;
+                        }
+                        width: 100%;
+                        display: grid;
+                        place-content: center;
+                        height: 100%;
+                        font-size: 50px;
+                        color: $soft_red;
+                        position: absolute;
+                        top: 0%;
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            top: 50%;
+                            left: 0%;
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 50%;
+                            background-color: $very_dark_blue;
+                            translate: -50% -50%;
+                        }
+                        &::after{
+                            content: '';
+                            position: absolute;
+                            top: 45%;
+                            right: -5px;
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 50%;
+                            background-color: $very_dark_blue;
+                        }
+                    }
+                }
+                &_inf{
+                    overflow: hidden;
+                    height: 50%;
+                    width: 100%;
+                    position: relative;
+                    top: 50%;
+                    border-bottom-right-radius: 15px;
+                    border-bottom-left-radius: 15px;
+                    span{
+						transition: transform .5s linear;
+                        background-color: $dark_desaturated_blue;
+                        padding: {
+                            left: 20px;
+                            right: 20px;
+                            top: 50px;
+                            bottom: 50px;
+                        }
+                        width: 100%;
+                        display: grid;
+                        place-content: center;
+                        height: 100%;
+                        font-size: 50px;
+                        color: $soft_red;
+                        position: absolute;
+                        bottom: 0%;
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            top: 50%;
+                            left: 0%;
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 50%;
+                            background-color: $very_dark_blue;
+                            translate: -50% -50%;
+                        }
+                        &::after{
+                            content: '';
+                            position: absolute;
+                            top: 45%;
+                            right: -5px;
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 50%;
+                            background-color: $very_dark_blue;
+                        }
+                    }
+                    box-shadow: 0px 10px 0px 0px $mostly_dark_blue;
+                }
+            }
+            &_second{
+                height: 100px;
+                width: 100px;
+                position: relative;
+                &_sup{
+                    --deg: 0;
+                    transition: transform .5s linear;
+                    transform: rotateX(calc(var(--deg)*1deg));
+                    overflow: hidden;
+                    height: 100%;
+                    width: 100%;
+                    position: absolute;
+                    border-radius: 15px;
+                    filter: brightness(80%);
+					span{
+						transition: transform .5s linear;
+                        background-color: $dark_desaturated_blue;
+                        padding: {
+                            left: 20px;
+                            right: 20px;
+                            top: 50px;
+                            bottom: 50px;
+                        }
+                        display: grid;
+                        width: 100%;
+                        place-content: center;
+                        height: 100%;
+                        font-size: 50px;
+                        color: $soft_red;
+                        position: absolute;
+                        top: 0%;
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            top: 50%;
+                            left: 0%;
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 50%;
+                            background-color: $very_dark_blue;
+                            translate: -50% -50%;
+                        }
+                        &::after{
+                            content: '';
+                            position: absolute;
+                            top: 45%;
+                            right: -5px;
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 50%;
+                            background-color: $very_dark_blue;
+                        }
+                    }
+                }
+                &_inf{
+                    overflow: hidden;
+                    height: 50%;
+                    width: 100%;
+                    position: relative;
+                    top: 50%;
+                    border-bottom-right-radius: 15px;
+                    border-bottom-left-radius: 15px;
+                    span{
+						transition: transform .5s linear;
+                        background-color: $dark_desaturated_blue;
+                        padding: {
+                            left: 20px;
+                            right: 20px;
+                            top: 50px;
+                            bottom: 50px;
+                        }
+                        display: grid;
+                        place-content: center;
+                        width: 100%;
+                        height: 100%;
+                        font-size: 50px;
+                        color: $soft_red;
+                        position: absolute;
+                        bottom: 0%;
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            top: 50%;
+                            left: 0%;
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 50%;
+                            background-color: $very_dark_blue;
+                            translate: -50% -50%;
+                        }
+                        &::after{
+                            content: '';
+                            position: absolute;
+                            top: 45%;
+                            right: -5px;
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 50%;
+                            background-color: $very_dark_blue;
+                        }
+                    }
+                    box-shadow: 0px 10px 0px 0px $mostly_dark_blue;
+                }
+            }
+        }
+    }
+}
