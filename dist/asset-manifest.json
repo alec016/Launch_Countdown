@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/Launch_Countdown/dist/static/css/main.d7de536a.css",
+    "main.js": "/Launch_Countdown/dist/static/js/main.9ffc4f7f.js",
+    "static/css/811.a7b9f2e1.chunk.css": "/Launch_Countdown/dist/static/css/811.a7b9f2e1.chunk.css",
+    "static/js/811.8a7f2969.chunk.js": "/Launch_Countdown/dist/static/js/811.8a7f2969.chunk.js",
+    "static/js/533.0a6c16ad.chunk.js": "/Launch_Countdown/dist/static/js/533.0a6c16ad.chunk.js",
+    "static/media/bg-stars.svg": "/Launch_Countdown/dist/static/media/bg-stars.166881a1c03d6b1239f5.svg",
+    "static/media/pattern-hills.svg": "/Launch_Countdown/dist/static/media/pattern-hills.815d688fd937623063b5.svg",
+    "index.html": "/Launch_Countdown/dist/index.html",
+    "main.d7de536a.css.map": "/Launch_Countdown/dist/static/css/main.d7de536a.css.map",
+    "main.9ffc4f7f.js.map": "/Launch_Countdown/dist/static/js/main.9ffc4f7f.js.map",
+    "811.a7b9f2e1.chunk.css.map": "/Launch_Countdown/dist/static/css/811.a7b9f2e1.chunk.css.map",
+    "811.8a7f2969.chunk.js.map": "/Launch_Countdown/dist/static/js/811.8a7f2969.chunk.js.map",
+    "533.0a6c16ad.chunk.js.map": "/Launch_Countdown/dist/static/js/533.0a6c16ad.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d7de536a.css",
+    "static/js/main.9ffc4f7f.js"
+  ]
+}
