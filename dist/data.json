@@ -1,0 +1,13 @@
+{
+    "properties": {
+        "days": 1,
+        "hours": 2,
+        "minutes": 30,
+        "seconds": 0
+    },
+    "date": {
+        "day": 5,
+        "month": 6,
+        "year": 2023
+    }
+}
